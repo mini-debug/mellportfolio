@@ -271,19 +271,19 @@ export const projects = [
   /* ---------------------------------------------------------------- 05 --- */
   {
     id: 'gurt',
-    title: 'GURT',
+    title: 'TARS (Walking Robot)',
     category: 'Robotics · AI · Embedded',
     tagline: 'A walking, voice-driven assistant robot.',
     technologies: ['Raspberry Pi 4B', 'Arduino Nano', 'OpenAI API', 'Servos', 'TFT display', 'Python'],
     hero: 'gurt-poster',
     gallery: [
-      { media: 'innernan0', caption: 'Simulation.', alt: 'Simulation view of the GURT assembly' },
+      { media: 'innernan0', caption: 'Simulation.', alt: 'Simulation view of the TARS assembly' },
       { media: 'inner', caption: 'Servo motor layout — excludes the Raspberry Pi and TFT.', alt: 'Internal servo motor arrangement' },
-      { media: 'GURT', caption: 'Controller tests.', alt: 'GURT robot during controller testing' },
-      { video: '/media/gurt-720.mp4', poster: 'gurt-poster', caption: 'GURT in action — voice demo.' },
+      { media: 'GURT', caption: 'Controller tests.', alt: 'TARS during controller testing' },
+      { video: '/media/gurt-720.mp4', poster: 'gurt-poster', caption: 'TARS in action — voice demo.' },
     ],
     summary:
-      'GURT is a walking personal assistant robot. It has a two-layer control system with coordinated servo control and conversation through the OpenAI API.',
+      'TARS is a walking personal assistant robot. It has a two-layer control system with coordinated servo control and conversation through the OpenAI API.',
     glance: [
       { label: 'Compute', value: 'Raspberry Pi 4B, Arduino Nano' },
       { label: 'Language model', value: 'OpenAI API' },
@@ -299,7 +299,7 @@ export const projects = [
         heading: 'The idea',
         body: [
           'I wanted to explore what a personal assistant feels like when it has a body.',
-          'Its formal name is TARS, or the Walking Robot. GURT was what our team called it.',
+          'Our team called it GURT.',
           'I built it with a small team in June and July 2025.',
         ],
       },
@@ -307,7 +307,7 @@ export const projects = [
         heading: 'Hardware',
         body: [
           'A Raspberry Pi 4B and an Arduino Nano run the robot. Two servos move the legs.',
-          'A microphone takes in speech, and a TFT display gives GURT a face.',
+          'A microphone takes in speech, and a TFT display gives TARS a face.',
           'We simulated the internal layout before assembly, to work out how to fit the servos around the Pi and the display.',
         ],
       },

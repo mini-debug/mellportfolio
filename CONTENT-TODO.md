@@ -151,6 +151,7 @@ Route: `/projects/gurt` | Status: PARTIAL
 
 - Repo: https://github.com/mini-debug/TARS-Summer-2025 (public, checked Oct 18). Linked on the page.
 - Formal name: TARS, or the Walking Robot. GURT was our team's name for it.
+- Site title: TARS (Walking Robot). Route stays `/projects/gurt` so old links keep working.
 - Hardware: Arduino Nano, two servos for the legs, microphone, Raspberry Pi 4B, TFT display.
 - Keep the old site's description too (small team, voice-driven, simulated internal layout), combined with the facts above.
 - On resume as "Walking Robot": two layer control system with coordinated servo control and OpenAI API conversation. Python. Jun 2025 to Jul 2025.
@@ -181,14 +182,14 @@ Route: `/projects/trash-sorting-robot` | Status: PARTIAL | Shown only in the "Al
 
 ### FACTS
 
-- Titles: La Muerte tiene Vida (the old site said "La Muerte Vivio"), I Spy With My Little Eye, Dragon (a painting), Water Monster (a mask).
+- Titles: La Muerte esta viva (confirmed Oct 18; earlier notes said "La Muerte tiene Vida", the old site said "La Muerte Vivio"), I Spy With My Little Eye, Dragon (a painting), Water Monster (a mask).
 - No medium on the site. Not important.
 
 ### OPEN
 
 - [x] Water Monster: keep it. It is the mask. Now in FACTS.
 - [ ] Dimensions for each piece (optional)
-- [x] Years: I Spy With My Little Eye 2022, Dragon 2023, Water Monster 2024, La Muerte tiene Vida 2025. Now on the site.
+- [x] Years: I Spy With My Little Eye 2022, Dragon 2023, Water Monster 2024, La Muerte esta viva 2025. Now on the site.
 - [ ] Any more pieces to add (only four carried over)
 
 ## About

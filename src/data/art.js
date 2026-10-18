@@ -7,9 +7,9 @@
 export const artworks = [
   {
     id: 'la-muerte-tiene-vida',
-    title: 'La Muerte tiene Vida',
+    title: 'La Muerte esta viva',
     media: 'plamuerte6',
-    alt: 'Painting titled La Muerte tiene Vida',
+    alt: 'Painting titled La Muerte esta viva',
     medium: null,
     year: 2025,
   },
