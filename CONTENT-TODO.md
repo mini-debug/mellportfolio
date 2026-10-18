@@ -141,7 +141,7 @@ Route: `/projects/cube` | Status: PARTIAL
 
 ### UNCLEAR
 
-- My note said "stryphone" (styrofoam?) and "protening" (unclear). Confirm what was made with each.
+- "stryphone" = styrofoam (the laser cut study model, already on the site). "protening" = printing, per my answer on Oct 18, with a question mark. Not on the site yet: what was printed?
 
 ## GURT
 
@@ -171,7 +171,7 @@ Route: `/projects/trash-sorting-robot` | Status: PARTIAL | Shown only in the "Al
 
 ### OPEN
 
-- [ ] The URL I meant to share is missing from my notes. Paste it here.
+- [x] URL: https://github.com/mini-debug/Draft-trash-robot- (public, checked Oct 18). Linked on the page.
 
 ---
 
@@ -188,7 +188,7 @@ Route: `/projects/trash-sorting-robot` | Status: PARTIAL | Shown only in the "Al
 
 - [x] Water Monster: keep it. It is the mask. Now in FACTS.
 - [ ] Dimensions for each piece (optional)
-- [ ] Year for each piece
+- [x] Years: I Spy With My Little Eye 2022, Dragon 2023, Water Monster 2024, La Muerte tiene Vida 2025. Now on the site.
 - [ ] Any more pieces to add (only four carried over)
 
 ## About

@@ -367,12 +367,12 @@ export const projects = [
         ],
       },
     ],
-    links: [],
+    links: [
+      { label: 'GitHub repo', href: 'https://github.com/mini-debug/Draft-trash-robot-' },
+    ],
     featured: false,
     status: 'complete',
-    needs: [
-      'The URL you meant to share (missing from your notes)',
-    ],
+    needs: [],
   },
 ];
 

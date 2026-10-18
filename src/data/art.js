@@ -1,8 +1,7 @@
 /**
  * ART ARCHIVE
- * Titles confirmed in CONTENT-TODO.md (Art archive). Medium, dimensions and
- * dates were never recorded there and have not been invented — supply them and
- * they will render automatically.
+ * Titles and years confirmed in CONTENT-TODO.md (Art archive). Medium is left
+ * off on purpose. Dimensions were never recorded and have not been invented.
  */
 
 export const artworks = [
@@ -12,7 +11,7 @@ export const artworks = [
     media: 'plamuerte6',
     alt: 'Painting titled La Muerte tiene Vida',
     medium: null,
-    year: null,
+    year: 2025,
   },
   {
     id: 'i-spy',
@@ -20,7 +19,7 @@ export const artworks = [
     media: 'paperp4',
     alt: 'Artwork titled I Spy With My Little Eye',
     medium: null,
-    year: null,
+    year: 2022,
   },
   {
     id: 'water-monster',
@@ -28,7 +27,7 @@ export const artworks = [
     media: 'p2',
     alt: 'Mask titled Water Monster',
     medium: null,
-    year: null,
+    year: 2024,
   },
   {
     id: 'dragon',
@@ -36,12 +35,11 @@ export const artworks = [
     media: 'dragp3',
     alt: 'Dragon painting',
     medium: null,
-    year: null,
+    year: 2023,
   },
 ];
 
 export const artNeeds = [
   'Dimensions for each piece (optional)',
-  'Year each was made',
   'Any additional work you want included — only four pieces carried over',
 ];
