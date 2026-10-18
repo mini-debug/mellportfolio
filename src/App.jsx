@@ -37,7 +37,11 @@ const router = createBrowserRouter([
       { path: '*', element: withSuspense(<NotFound />) },
     ],
   },
-]);
+], {
+  // GitHub Pages serves the site from /mellportfolio/, so routes must be
+  // matched relative to the deployment base, not the domain root.
+  basename: import.meta.env.BASE_URL.replace(/\/$/, '') || '/',
+});
 
 export default function App() {
   return <RouterProvider router={router} />;
