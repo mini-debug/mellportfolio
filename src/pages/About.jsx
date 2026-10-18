@@ -5,6 +5,7 @@ import Reveal from '../components/Reveal';
 import Button from '../components/Button';
 import NeedsNote from '../components/NeedsNote';
 import Seo from '../components/Seo';
+import { asset } from '../utils/asset';
 import styles from './About.module.css';
 
 export default function About() {
@@ -136,6 +137,7 @@ export default function About() {
           <Button to="/projects" variant="primary" arrow>
             See the work
           </Button>
+          <Button href={asset('/files/Mellanie-Rodriguez-Resume.pdf')}>Resume (PDF)</Button>
           <Button to="/socials">Get in touch</Button>
         </div>
 

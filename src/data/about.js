@@ -83,6 +83,5 @@ export const bio = {
     design: ['Physical product design', 'CAD & prototyping', 'Painting & sculpture', 'Visual & interface design'],
   },
   needs: [
-    'Whether you want a downloadable CV / resume link',
   ],
 };

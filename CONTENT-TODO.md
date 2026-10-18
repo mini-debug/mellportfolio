@@ -195,6 +195,8 @@ Route: `/projects/trash-sorting-robot` | Status: PARTIAL | Shown only in the "Al
 
 ### FACTS
 
+- Resume PDF on the About page: `public/files/Mellanie-Rodriguez-Resume.pdf`. It is a copy of my resume with the phone number removed. If I update my resume, the phone number has to be removed again before it goes on the site.
+
 - Name: Mellanie Rodriguez. Email: mxrodrig@mit.edu. Site: mini-debug.github.io/mellportfolio. GitHub: github.com/mini-debug
 - MIT, B.S. Electrical Engineering and Computer Science, minor in Design. Expected May 2029.
 - Coursework: 6.200, 6.1903, 6.1200, 8.02, 8.01, 18.02, 6.S089
