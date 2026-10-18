@@ -1,0 +1,53 @@
+.secondary {
+  margin-top: var(--s-9);
+  padding-top: var(--s-7);
+  border-top: 1px solid var(--border);
+}
+
+.secondaryHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2) var(--s-4);
+  margin-bottom: var(--s-5);
+}
+
+.secondaryTitle {
+  font-size: var(--t-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.secondaryNote {
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  color: var(--text-muted);
+}
+
+.secondaryList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+  padding: 0;
+  list-style: none;
+}
+
+.secondaryItem {
+  display: flex;
+}
+
+@media (min-width: 640px) {
+  .secondaryList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .secondaryList {
+    /* Secondary work sits at one-third width so it reads as subordinate to the
+       featured grid without needing a different card design. */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

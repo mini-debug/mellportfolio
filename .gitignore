@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Smoke-test scratch dir
+.smoke/
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# NOTE: media-source/ and public/media/ are intentionally committed.
+#   media-source/  original masters — the only copies that exist
+#   public/media/  generated derivatives — committed so CI does not need to
+#                  re-encode 24 MP images on every deploy
+# If the repo becomes unwieldy, move media-source/ to Git LFS rather than
+# deleting it.

@@ -1,0 +1,21 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--dur-4) var(--ease), transform var(--dur-4) var(--ease);
+}
+
+.shown {
+  opacity: 1;
+  transform: none;
+}
+
+/* Reduced motion: no movement, no fade, no delay. The hook already starts
+   `shown` true, but this guarantees it even if a delay was passed. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    transition-delay: 0ms !important;
+  }
+}

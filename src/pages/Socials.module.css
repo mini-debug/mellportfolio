@@ -1,0 +1,146 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  max-width: 780px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Rows rather than icon buttons: each channel gets a handle and a reason to
+   click, which a circular icon cannot carry. */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    border-color var(--dur-2) var(--ease),
+    background-color var(--dur-2) var(--ease),
+    transform var(--dur-2) var(--ease);
+}
+
+/* Accent rail that wipes in from the left on hover. */
+.card::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur-3) var(--ease);
+}
+
+.card:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-accent);
+  transform: translateX(3px);
+}
+
+.card:hover::before,
+.card:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--tracking-label);
+  color: var(--text-faint);
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text-dim);
+  transition: color var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
+}
+
+.card:hover .iconWrap {
+  color: var(--accent-text);
+  border-color: var(--border-accent);
+}
+
+.icon {
+  width: 19px;
+  height: 19px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.handle {
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  color: var(--accent-text);
+  overflow-wrap: anywhere;
+}
+
+.desc {
+  font-size: var(--t-small);
+  color: var(--text-muted);
+}
+
+.arrowWrap {
+  color: var(--text-muted);
+  transition: color var(--dur-2) var(--ease), transform var(--dur-2) var(--ease);
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.card:hover .arrowWrap {
+  color: var(--accent-text);
+  transform: translate(2px, -2px);
+}
+
+/* Stack on narrow screens: the description moves under the icon block. */
+@media (max-width: 560px) {
+  .card {
+    grid-template-columns: auto 1fr auto;
+    gap: var(--s-3);
+  }
+
+  .index {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .arrowWrap {
+    transform: none;
+  }
+}

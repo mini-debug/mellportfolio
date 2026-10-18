@@ -1,0 +1,42 @@
+.shell {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.main {
+  flex: 1;
+  outline: none;
+}
+
+/* Fine film grain over the whole page. A single tiled SVG turbulence texture —
+   no images, no JS, negligible cost. Kept very low opacity so it reads as
+   texture rather than noise. */
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: var(--z-grain);
+  pointer-events: none;
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  will-change: transform;
+}
+
+/* Subtle drift so the grain does not look like a static print artefact. */
+@media (prefers-reduced-motion: no-preference) {
+  .grain {
+    animation: grainShift 8s steps(6) infinite;
+  }
+}
+
+@keyframes grainShift {
+  0% { transform: translate(0, 0); }
+  16% { transform: translate(-2%, 1%); }
+  33% { transform: translate(1%, -2%); }
+  50% { transform: translate(-1%, 2%); }
+  66% { transform: translate(2%, 1%); }
+  83% { transform: translate(-2%, -1%); }
+  100% { transform: translate(0, 0); }
+}

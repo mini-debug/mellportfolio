@@ -1,0 +1,32 @@
+.wrap {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-starfield);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Very low-intensity atmosphere: a cool wash top-left, warm-lavender
+   bottom-right. Keeps the field from reading as a flat black rectangle
+   without introducing a visible gradient. */
+.veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      120% 90% at 12% 0%,
+      var(--atmo-cool),
+      transparent 58%
+    ),
+    radial-gradient(
+      100% 80% at 88% 100%,
+      var(--atmo-warm),
+      transparent 60%
+    );
+}

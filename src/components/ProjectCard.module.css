@@ -1,0 +1,249 @@
+.wrap {
+  display: flex;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    border-color var(--dur-3) var(--ease),
+    background-color var(--dur-3) var(--ease),
+    transform var(--dur-3) var(--ease),
+    box-shadow var(--dur-3) var(--ease);
+}
+
+.card:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* --- Corner ticks -------------------------------------------------------- */
+.tick {
+  position: absolute;
+  z-index: 3;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--accent);
+  opacity: 0;
+  transition: opacity var(--dur-3) var(--ease);
+}
+
+.card:hover .tick,
+.card:focus-visible .tick {
+  opacity: 0.75;
+}
+
+.tick[data-corner='tl'] { top: 6px; left: 6px; border-right: 0; border-bottom: 0; }
+.tick[data-corner='tr'] { top: 6px; right: 6px; border-left: 0; border-bottom: 0; }
+.tick[data-corner='bl'] { bottom: 6px; left: 6px; border-right: 0; border-top: 0; }
+.tick[data-corner='br'] { bottom: 6px; right: 6px; border-left: 0; border-top: 0; }
+
+/* --- Media --------------------------------------------------------------- */
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-sunken);
+  border-bottom: 1px solid var(--border);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Images sit slightly desaturated and darkened, resolving on hover. Keeps
+     the grid visually calm and makes hover feel like focus, not decoration. */
+  filter: saturate(0.72) brightness(0.82) contrast(1.04);
+  transform: scale(1.01);
+  transition: filter var(--dur-4) var(--ease), transform var(--dur-4) var(--ease);
+}
+
+.card:hover .img img,
+.card:focus-visible .img img {
+  filter: saturate(1) brightness(0.98) contrast(1);
+  transform: scale(1.045);
+}
+
+/* Gradient scrim so the index number stays legible on any image. */
+.media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--bg) 55%, transparent) 0%,
+    transparent 42%,
+    transparent 68%,
+    color-mix(in srgb, var(--bg) 42%, transparent) 100%
+  );
+  pointer-events: none;
+}
+
+.mediaEmpty {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--text-faint);
+}
+
+.schematic {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.index {
+  position: absolute;
+  top: var(--s-3);
+  left: var(--s-4);
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  color: var(--text);
+  text-shadow: 0 1px 4px color-mix(in srgb, var(--bg) 85%, black);
+}
+
+.badge {
+  position: absolute;
+  top: var(--s-3);
+  right: var(--s-3);
+  z-index: 2;
+  padding: 3px var(--s-2);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-warm) 45%, transparent);
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-warm);
+}
+
+/* --- Body ---------------------------------------------------------------- */
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-5);
+}
+
+.category {
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.title {
+  font-size: var(--t-h3);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tagline {
+  font-size: var(--t-small);
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1) var(--s-2);
+  margin-top: var(--s-1);
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: 2px var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* --- CTA ----------------------------------------------------------------- */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: auto;
+  padding-top: var(--s-4);
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.arrow {
+  width: 22px;
+  height: 11px;
+  overflow: visible;
+  transition: transform var(--dur-2) var(--ease);
+}
+
+.card:hover .arrow,
+.card:focus-visible .arrow {
+  transform: translateX(5px);
+}
+
+.card:hover .cta,
+.card:focus-visible .cta {
+  color: var(--accent-text);
+}
+
+/* --- Placeholder variant ------------------------------------------------- */
+.placeholder {
+  border-style: dashed;
+  border-color: var(--border-strong);
+}
+
+.placeholder .title,
+.placeholder .cta {
+  color: var(--text-dim);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card:hover {
+    transform: none;
+  }
+
+  .img img,
+  .card:hover .img img {
+    transform: none;
+  }
+}
