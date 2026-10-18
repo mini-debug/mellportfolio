@@ -51,7 +51,7 @@ export const projects = [
       'I designed a custom FM radio PCB in Altium during IAP 2026, as part of 6.S089, a PCB design class at MIT. I wanted to explore RF systems, signal processing, and embedded hardware debugging. It was my first PCB design.',
     glance: [
       { label: 'Class', value: '6.S089, MIT' },
-      { label: 'When', value: 'IAP 2026 (January)' },
+      { label: 'Dates', value: 'Jan 2026 – Present' },
       { label: 'Tools', value: 'Altium, LTspice' },
       { label: 'Board', value: 'RF signal path, audio amplifier stage' },
     ],
@@ -123,7 +123,7 @@ export const projects = [
       {
         heading: 'End effector',
         body: [
-          'I built the end effector. I designed it in Onshape and Fusion 360.',
+          'I designed the robotic electrospinning end effector in Onshape and Fusion 360, and built it.',
           'I compared different needle lengths and plastic covers that I 3D printed. From those comparisons, I estimate it cut electric field arcing by about 10%.',
         ],
       },
@@ -131,7 +131,7 @@ export const projects = [
         heading: 'Syringe pump',
         body: [
           'I helped develop the concept for the new syringe pump.',
-          'I built the syringe pump system with an ESP32 and a NEMA 17 stepper motor, for automated polymer dispensing.',
+          'I built the fluid delivery system with an ESP32 and a NEMA 17 stepper motor, for automated polymer dispensing.',
           'I built an early concept that made the pump a manual device, with a breadboard controller and an LCD. The project moved to an app that monitors the syringe instead. A grad student made the app.',
         ],
       },
@@ -145,8 +145,8 @@ export const projects = [
       {
         heading: 'Electric field model',
         body: [
-          'I modeled the electric field of the system in Python. I used NumPy, SciPy, and matplotlib.',
-          'The model guided where to place the high voltage needle.',
+          'I wrote Python tools to analyze the electric field distribution of the system. I used NumPy, SciPy, and matplotlib.',
+          'The analysis guided where to place the high voltage needle.',
         ],
       },
       {
@@ -166,7 +166,7 @@ export const projects = [
   /* ---------------------------------------------------------------- 03 --- */
   {
     id: 'smart-frother',
-    title: 'Moon Frother',
+    title: 'Smart Beverage Frother',
     category: 'Embedded · Product Design',
     tagline: 'A frother with a moon that floats while your drink is frothed.',
     technologies: ['ESP32', 'C++', 'I2C'],
@@ -182,6 +182,7 @@ export const projects = [
       'A drink frother with an ESP32 as the main controller. It reuses an existing floating moon PCB template, so a moon floats while a drink is frothed.',
     glance: [
       { label: 'Controller', value: 'ESP32' },
+      { label: 'Dates', value: 'Dec 2025 – Present' },
       { label: 'Code', value: 'C++, I2C' },
       { label: 'Materials', value: 'SLS nylon, aluminum, acrylic, resin, laser cut metal' },
       { label: 'Role', value: 'Architecture lead (first version)' },
@@ -191,9 +192,9 @@ export const projects = [
       {
         heading: 'How it works',
         body: [
-          'I reused an existing floating moon PCB template, so a moon floats while a drink is frothed.',
+          'I call it the Moon Frother. I reused an existing floating moon PCB template, so a moon floats while a drink is frothed.',
           'An ESP32 is the main controller. Two DC motors spin gears that adjust based on the cup height.',
-          'It also has temperature regulation, a TFT display, and a potentiometer for input.',
+          'I built the ESP32 control for temperature regulation and motor driving, with a TFT display and potentiometer input.',
         ],
       },
       {
@@ -201,7 +202,7 @@ export const projects = [
         body: [
           'The plate and gears are SLS nylon. The drink passes through aluminum at the bottom of the plate.',
           'The electronics enclosure is acrylic. The cabinets are resin, and their tolerance was slightly tight.',
-          'I also used laser cut metal, and Formlabs SLA and SLS printing.',
+          'I designed custom parts for Formlabs SLA and SLS printing, and for laser cut metal.',
         ],
       },
       {
@@ -271,7 +272,7 @@ export const projects = [
   /* ---------------------------------------------------------------- 05 --- */
   {
     id: 'gurt',
-    title: 'TARS (Walking Robot)',
+    title: 'Walking Robot',
     category: 'Robotics · AI · Embedded',
     tagline: 'A walking, voice-driven assistant robot.',
     technologies: ['Raspberry Pi 4B', 'Arduino Nano', 'OpenAI API', 'Servos', 'TFT display', 'Python'],
@@ -283,7 +284,7 @@ export const projects = [
       { video: '/media/gurt-720.mp4', poster: 'gurt-poster', caption: 'TARS in action — voice demo.' },
     ],
     summary:
-      'TARS is a walking personal assistant robot. It has a two-layer control system with coordinated servo control and conversation through the OpenAI API.',
+      'A walking personal assistant robot. It has a two-layer control system with coordinated servo control and conversation through the OpenAI API.',
     glance: [
       { label: 'Compute', value: 'Raspberry Pi 4B, Arduino Nano' },
       { label: 'Language model', value: 'OpenAI API' },
@@ -299,7 +300,7 @@ export const projects = [
         heading: 'The idea',
         body: [
           'I wanted to explore what a personal assistant feels like when it has a body.',
-          'Our team called it GURT.',
+          'Its formal name is TARS. Our team called it GURT.',
           'I built it with a small team in June and July 2025.',
         ],
       },
@@ -314,7 +315,7 @@ export const projects = [
       {
         heading: 'Software',
         body: [
-          'The code is in Python. A two-layer control system handles coordinated servo control and conversation through the OpenAI API.',
+          'The code is in Python. I built a two-layer control system with coordinated servo control and conversation through the OpenAI API.',
         ],
       },
     ],

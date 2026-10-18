@@ -25,6 +25,16 @@ BLOCKED = no usable copy yet. PARTIAL = copy exists, gaps remain. READY = nothin
 
 ---
 
+# RESUME MATCH (Oct 18)
+
+The site wording matches my resume (Mellanie_s_Resume.pdf): project titles, dates, bullet wording, the Auto-ID Labs and Tufts entries, skills, coursework, activities and honors.
+
+One deliberate difference: the resume says "cutting electric field arcing by 10%". The site says "an estimated 10%", because the number is my own estimate. Suggested resume edit: "cutting electric field arcing by an estimated 10%".
+
+If the resume changes, update the site to match, and re-upload the resume PDF with the phone number removed.
+
+---
+
 # BLOCKED PROJECTS
 
 ## FM Radio Receiver
@@ -102,7 +112,7 @@ Route: `/projects/smart-frother` | Status: READY | Tools: ESP32, C++, I2C
 - I now work on it alone.
 - Redesign goal: make the morning drink process autonomous.
 - I want to control it with an app. The app is not built yet, and I still need to figure out the new electronics.
-- Site title: Moon Frother. (Route stays `/projects/smart-frother` so old links keep working.)
+- Site title: Smart Beverage Frother, to match my resume (Oct 18). The page says "I call it the Moon Frother." Dates: Dec 2025 – Present.
 - (Slide deck) Slide title: Moon Frother.
 
 ### OPEN
@@ -151,7 +161,7 @@ Route: `/projects/gurt` | Status: PARTIAL
 
 - Repo: https://github.com/mini-debug/TARS-Summer-2025 (public, checked Oct 18). Linked on the page.
 - Formal name: TARS, or the Walking Robot. GURT was our team's name for it.
-- Site title: TARS (Walking Robot). Route stays `/projects/gurt` so old links keep working.
+- Site title: Walking Robot, to match my resume (Oct 18). The page says its formal name is TARS and the team called it GURT. Route stays `/projects/gurt`.
 - Hardware: Arduino Nano, two servos for the legs, microphone, Raspberry Pi 4B, TFT display.
 - Keep the old site's description too (small team, voice-driven, simulated internal layout), combined with the facts above.
 - On resume as "Walking Robot": two layer control system with coordinated servo control and OpenAI API conversation. Python. Jun 2025 to Jul 2025.

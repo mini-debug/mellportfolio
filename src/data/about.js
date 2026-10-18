@@ -5,11 +5,19 @@
  * projects. They read as experience rather than as built projects, so they
  * live here as a timeline instead.
  *
- * Text is condensed from the previous site. Dates are confirmed in
- * CONTENT-TODO.md.
+ * Wording matches the resume (Mellanie_s_Resume.pdf, Oct 2026), plus details
+ * from the previous site. Dates are confirmed in CONTENT-TODO.md.
  */
 
 export const experience = [
+  {
+    id: 'auto-id',
+    org: 'Auto-ID Labs @ MIT',
+    role: 'Incoming Firmware Undergraduate Intern',
+    period: 'Oct 2026',
+    summary: 'Incoming firmware internship at the Auto-ID Labs at MIT, starting October 2026.',
+    gallery: [],
+  },
   {
     id: 'media-lab',
     org: 'MIT Media Lab',
@@ -18,16 +26,16 @@ export const experience = [
     summary:
       'UROP in the Critical Matter Group, supervised by Behnaz Farahi and Yuxiang Cheng. The system creates thin fibers by dispensing liquid through a needle connected to a 19 kV wire, autonomously, with a UR20 and an xArm 6.',
     detail: [
-      'I built the end effector in Onshape and Fusion 360. I estimate it cut electric field arcing by about 10%.',
-      'I helped develop the concept for the new syringe pump, then built it with an ESP32 and a NEMA 17 stepper motor for automated polymer dispensing.',
-      'I modeled the electric field in Python to guide where to place the high voltage needle.',
+      'Designed a robotic electrospinning end effector in Onshape and Fusion 360, cutting electric field arcing by an estimated 10%.',
+      'Built an ESP32 and NEMA 17 stepper motor fluid delivery system for automated polymer dispensing.',
+      'Wrote Python tools to analyze electric field distributions and guide high-voltage needle placement.',
     ],
     link: { to: '/projects/electrospinning', label: 'Read the full project' },
     gallery: [],
   },
   {
     id: 'inkbit',
-    org: 'Inkbit 3D',
+    org: 'Inkbit',
     role: 'Manufacturing Intern',
     period: 'Apr 2025 – May 2025',
     media: 'frontWater',
@@ -63,6 +71,15 @@ export const experience = [
       { media: 'LLmain', caption: 'Final build.', alt: 'The completed vibration simulator' },
     ],
   },
+  {
+    id: 'tufts',
+    org: 'Tufts Engineering Design Lab',
+    role: 'Robotics Intern',
+    period: 'Jul 2023',
+    summary: 'Designed an autonomous recycling robot using a Raspberry Pi 3B+ and supervised machine learning.',
+    link: { to: '/projects/trash-sorting-robot', label: 'Read the full project' },
+    gallery: [],
+  },
 ];
 
 /**
@@ -77,6 +94,44 @@ export const bio = {
   paragraphs: [
     'I study EECS and Design at MIT. I have never been especially interested in picking one lane — the work I like most sits at the seam between disciplines, where a circuit board, a fabrication method and a visual decision all have to agree with each other.',
     'In practice that means I move between electronics and PCB design, robotics and embedded systems, software, physical product development, and art. A technical artist, if that needs a title: the point is turning an idea into something that exists and works.',
+  ],
+  skills: [
+    { label: 'Languages', items: ['Python', 'C/C++'] },
+    { label: 'Hardware', items: ['ESP32', 'Arduino', 'Raspberry Pi', 'I2C'] },
+    { label: 'Tools', items: ['Altium', 'LTspice', 'SolidWorks', 'Fusion 360', 'Onshape', 'Git', 'PlatformIO'] },
+  ],
+  coursework: [
+    'Circuits and Electronics (6.200)',
+    'C and Assembly (6.1903)',
+    'Discrete Math (6.1200)',
+    'E&M (8.02)',
+    'Classical Mechanics (8.01)',
+    'Multivariable Calculus (18.02)',
+    'PCB Design (6.S089)',
+  ],
+  activities: [
+    {
+      role: 'Project Mentor',
+      org: 'MIT Edgerton Center and Metropolis',
+      period: 'Dec 2025 – Present',
+      detail: [
+        'Mentor 100+ students per semester at two makerspaces.',
+        'Teach power supplies, laser cutting, FDM and SLA fabrication basics, and iterating on projects.',
+      ],
+    },
+    {
+      role: 'Member',
+      org: 'Society of Hispanic Professional Engineers (SHPE)',
+      period: 'Sep 2025 – Present',
+      detail: ['Attend chapter events and volunteer in STEM classes for 20+ Hispanic students in Boston Public Schools.'],
+    },
+  ],
+  honors: [
+    'Amazon Future Engineer Scholar',
+    'Microsoft Disability Scholar',
+    'U.S. Presidential Scholar Nominee',
+    '2nd Place, MakeMIT',
+    '1st Place, Design Museum Everywhere',
   ],
   interests: {
     engineering: ['Electronics & PCB design', 'Robotics', 'Embedded systems', 'Computer vision', 'Manufacturing & fabrication'],

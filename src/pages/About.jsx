@@ -49,6 +49,25 @@ export default function About() {
           </figure>
         </div>
 
+        {/* --- Skills --- */}
+        <section className={styles.interests} aria-labelledby="skills">
+          <h2 id="skills" className={styles.h2}>
+            Technical skills
+          </h2>
+          <div className={styles.skillCols}>
+            {bio.skills.map((group) => (
+              <div key={group.label}>
+                <h3 className={styles.interestTitle}>{group.label}</h3>
+                <ul className={styles.interestList}>
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* --- Interests --- */}
         <section className={styles.interests} aria-labelledby="interests">
           <h2 id="interests" className={styles.h2}>
@@ -131,6 +150,60 @@ export default function About() {
               </Reveal>
             ))}
           </ol>
+        </section>
+
+        {/* --- Activities --- */}
+        <section className={styles.experience} aria-labelledby="activities">
+          <h2 id="activities" className={styles.h2}>
+            Activities
+          </h2>
+          <ol className={styles.timeline}>
+            {bio.activities.map((item) => (
+              <li key={item.org} className={styles.entry}>
+                <div className={styles.entryMarker} aria-hidden="true">
+                  <span className={styles.entryDot} />
+                </div>
+                <div className={styles.entryBody}>
+                  <div className={styles.entryHead}>
+                    <h3 className={styles.entryOrg}>{item.org}</h3>
+                    <p className={styles.entryRole}>
+                      {item.role}
+                      <span className={styles.dim}> — {item.period}</span>
+                    </p>
+                  </div>
+                  <ul className={styles.entryDetail}>
+                    {item.detail.map((d, j) => (
+                      <li key={j}>{d}</li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* --- Coursework and honors --- */}
+        <section className={styles.interests} aria-labelledby="coursework">
+          <div className={styles.interestCols}>
+            <div>
+              <h2 id="coursework" className={styles.h2}>
+                Coursework
+              </h2>
+              <ul className={styles.interestList}>
+                {bio.coursework.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className={styles.h2}>Honors</h2>
+              <ul className={styles.interestList}>
+                {bio.honors.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </section>
 
         <div className={styles.cta}>
